@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>상담 녹음·전사 데이터로 할 수 있는 연구</title>
+<style>
+  :root{--navy:#17305a;--navy2:#2b4a84;--ink:#222a35;--muted:#5b6673;--line:#dce1ea;--bg:#fff;--panel:#f6f8fb;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;
+    font-family:"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,"Segoe UI","Noto Sans KR",sans-serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:44px 34px 90px;}
+  header.top{border-bottom:2px solid var(--navy);padding-bottom:16px;margin-bottom:26px;}
+  header.top h1{color:var(--navy);font-size:24px;font-weight:800;margin:0 0 6px;letter-spacing:-.3px;}
+  header.top .sub{color:var(--muted);font-size:14px;}
+  h2{color:var(--navy);font-size:18px;font-weight:800;margin:32px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line);}
+  h2 .tag{font-size:12px;font-weight:700;color:#2e7d32;margin-left:8px;vertical-align:middle;}
+  h3{font-size:14.5px;font-weight:700;color:var(--navy2);margin:16px 0 6px;}
+  p{font-size:14.5px;margin:7px 0;}
+  ul{font-size:14.5px;margin:7px 0;padding-left:20px;} li{margin:4px 0;}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px;}
+  th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--navy);color:#fff;font-weight:700;}
+  td.n{text-align:right;font-weight:700;white-space:nowrap;}
+  tr.sum td{background:var(--panel);font-weight:700;}
+  .lead{font-size:14.5px;color:#333b45;margin:4px 0 10px;}
+  .study{border:1px solid var(--line);border-left:4px solid var(--navy2);border-radius:0 8px 8px 0;padding:11px 15px;margin:9px 0;}
+  .study .tt{font-weight:800;color:var(--navy);font-size:14.5px;}
+  .study .ln{font-size:13.6px;margin:5px 0;}
+  .study .ln .k{font-weight:700;color:var(--navy2);}
+  .study .meta{font-size:12.3px;color:var(--muted);margin-top:6px;}
+  .note{font-size:13px;color:var(--muted);}
+</style>
+</head>
+<body><nav style="background:#17305a;padding:11px 20px;line-height:2;"><a href="index.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">허브</a><a href="agenda.html" style="color:#fff;font-weight:800;text-decoration:underline;margin-right:18px;font-size:13px;">연구 지도</a><a href="protocol.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">코딩 프로토콜</a><a href="paper1.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">1편 설계서</a><a href="irb.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">IRB 서류</a><a href="ops.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">운영안</a></nav>
+<div class="wrap">
+
+<header class="top">
+  <h1>상담 녹음·전사 데이터로 할 수 있는 연구</h1>
+  <div class="sub">보청기 상담 녹음을 전사하고 코딩해 수행 가능한 연구 주제. 동반자 연구는 그중 하나다. 2026-10-26</div>
+</header>
+
+<h2>1. 데이터 자산</h2>
+<p class="lead">우리가 가진 것은 전국 센터망에서 실제로 쌓이는 보청기 상담 녹음과 자동 전사다. 이 대화 데이터가 구매, 반품, 청력도, 고객 속성, 담당 청능사, 센터와 한 사람 단위로 연결된다. 상담이 실제 결과까지 이어지는 실세계 임상 상담 코퍼스는 드물다.</p>
+<table>
+  <tr><th>구분</th><th>건수</th></tr>
+  <tr><td>전체 상담 녹음(모든 유형, 계속 증가)</td><td class="n">1,318</td></tr>
+  <tr><td>신규 고객 첫 상담 녹음</td><td class="n">435</td></tr>
+  <tr><td>전사 원문 확보</td><td class="n">253</td></tr>
+  <tr><td>온전 세션(전사 2,000자 이상)</td><td class="n">216</td></tr>
+  <tr class="sum"><td>연구 적격(첫 상담, 수리/재방문/소아/교육용 제외)</td><td class="n">175</td></tr>
+</table>
+<h3>대화 데이터에 연결되는 것</h3>
+<ul>
+  <li>구매와 반품: ANOS 결제 기록으로 전수.</li>
+  <li>청력도: 순음 역치 등 객관 청력 자료.</li>
+  <li>고객 속성: 연령, 성별, 유입 경로.</li>
+  <li>상담 주체: 담당 청능사, 센터.</li>
+  <li>전향으로 추가 가능: 만족도(IOI-HA, KAPM), 착용 데이터로깅, EMA.</li>
+</ul>
+<p class="note">녹음은 2026년 6월 16일 이후가 안정적이며 약 4개월의 관찰 기간을 포함한다. 전향 수집으로 계속 늘어난다.</p>
+
+<h2>2. 이 데이터로 할 수 있는 연구</h2>
+<p class="lead">같은 대화 코퍼스에서 여러 갈래의 연구가 나온다. 아래는 주제별로 묶은 연구 후보다.</p>
+
+<h2>A. 동반자와 삼자 상담<span class="tag">파일럿 완료</span></h2>
+<p class="lead">같이 온 가족이 어떻게 말하고 끼어드는지가 구매와 유지에 미치는 영향. 적격 175건 중 동반자 있음 91건으로 1차 코딩과 예비 결과가 나와 있다(동반 있음 구매 52% 대 없음 41%, 배우자 동반 63% 대 성인자녀 48%, 동반자가 결정 종결 시 구매 후 취소 25% 대 당사자 종결 12%).</p>
+<div class="study">
+  <div class="tt">A1. 동반자의 자율성 지지와 통제가 구매와 구매 후 취소에 미치는 영향</div>
+  <div class="ln"><span class="k">핵심</span> 가족이 당사자를 세워주는가 밀어붙이는가가 구매와 구매 후 취소를 가르는가?</div>
+  <div class="meta">동반자 91건 발화 코딩과 ANOS 구매/취소. 저널 후보: Patient Education and Counseling, International Journal of Audiology</div>
+</div>
+<div class="study">
+  <div class="tt">A2. 배우자 동반과 성인자녀 동반의 의사소통 역할과 구매 전환</div>
+  <div class="ln"><span class="k">핵심</span> 한국의 효 돌봄 맥락에서 배우자와 성인자녀 동반이 결정 과정과 구매를 다르게 만드는가?</div>
+  <div class="meta">동반자 91건(자녀 62, 배우자 19)과 결제 기록. 저널 후보: International Journal of Audiology, Journal of Applied Gerontology</div>
+</div>
+<div class="study">
+  <div class="tt">A3. 삼자 상담에서 당사자 소외</div>
+  <div class="ln"><span class="k">핵심</span> 당사자가 밀려나고 청능사와 가족끼리 대화하는 상담이 연령/난청/지불자로 예측되는가? (화자분리 필요)</div>
+  <div class="meta">동반자 91건 화자분리 재전사와 객관 청력도. 저널 후보: Patient Education and Counseling, Social Science and Medicine</div>
+</div>
+
+<h2>B. 청능사 상담 방식과 상담 품질</h2>
+<p class="lead">상담자가 어떻게 말하는지, 무엇이 좋은 상담인지를 실제 발화로 측정한다. 훈련으로 바꿀 수 있는 변인이라 임상과 교육에 바로 이어진다.</p>
+<div class="study">
+  <div class="tt">B1. 청능사별 상담 스타일의 변량: 당사자 대 동반자 지향과 환자 참여 촉진</div>
+  <div class="ln"><span class="k">핵심</span> 청능사가 당사자를 향하는가 가족을 향하는가, 환자 참여를 끌어내는가가 상담자에 따라 얼마나 갈리는가?</div>
+  <div class="meta">적격 175건, 세션별 담당 청능사. 다수준 분석. 저널 후보: International Journal of Audiology</div>
+</div>
+<div class="study">
+  <div class="tt">B2. 좋은 상담의 언어: 어떤 상담 발화가 구매, 만족, 지속과 연관되는가</div>
+  <div class="ln"><span class="k">핵심</span> 공감, 정보 제공, 환자 참여 촉진 같은 발화 요소가 결과와 어떻게 연결되는가?</div>
+  <div class="meta">전사 코딩과 ANOS 결과. 저널 후보: International Journal of Audiology, Patient Education and Counseling</div>
+</div>
+<div class="study">
+  <div class="tt">B3. 보청기 상담 품질 지표의 개발과 타당화</div>
+  <div class="ln"><span class="k">핵심</span> 실제 상담에서 측정 가능한 상담 품질 지표를 만들고 결과로 검증할 수 있는가?</div>
+  <div class="meta">코딩 코퍼스. 저널 후보: Patient Education and Counseling</div>
+</div>
+
+<h2>C. 상담 언어로 결과 예측 (자연어 처리와 기계학습)</h2>
+<p class="lead">상담에서 나온 말로 결과를 예측한다. 상담 중에 미리 신호를 잡는 모델로, 데이터 규모가 커질수록 강해진다.</p>
+<div class="study">
+  <div class="tt">C1. 첫 상담 전사로 구매, 반품, 사용 중단을 예측하는 모델</div>
+  <div class="ln"><span class="k">핵심</span> 상담 대화만으로 누가 사고, 누가 반품하고, 누가 안 쓸지를 미리 예측할 수 있는가?</div>
+  <div class="meta">전사와 ANOS 결과. 언어모델 기반 예측. 저널 후보: Journal of Medical Internet Research, npj Digital Medicine</div>
+</div>
+<div class="study">
+  <div class="tt">C2. 미구매와 반품 상담의 언어 신호</div>
+  <div class="ln"><span class="k">핵심</span> 무엇이 그 자리의 결정을 막고, 어떤 말이 뒤의 반품으로 이어지는가?</div>
+  <div class="meta">전사 코딩과 결과. 저널 후보: Patient Education and Counseling</div>
+</div>
+
+<h2>D. 환자의 고민과 보청기 수용 장벽</h2>
+<p class="lead">설문이 아니라 실제 상담에서 환자가 꺼낸 말로, 한국인이 보청기를 받아들이기 어려워하는 진짜 이유를 본다.</p>
+<div class="study">
+  <div class="tt">D1. 실제 상담에 드러나는 환자의 걱정과 수용 장벽</div>
+  <div class="ln"><span class="k">핵심</span> 낙인, 비용, 외관, 효과 불신 등 환자가 상담에서 실제로 표현하는 장벽은 무엇인가?</div>
+  <div class="meta">전사 질적/혼합 분석. 저널 후보: International Journal of Audiology, Ear and Hearing</div>
+</div>
+<div class="study">
+  <div class="tt">D2. 보류와 미구매 상담의 담화 분석</div>
+  <div class="ln"><span class="k">핵심</span> 사지 않거나 미룬 상담에서 결정을 막은 대화의 흐름은 어떠한가?</div>
+  <div class="meta">미구매/보류 세션의 담화 분석. 저널 후보: Patient Education and Counseling</div>
+</div>
+
+<h2>E. 의사결정 방식과 지속 사용 (전향)</h2>
+<p class="lead">상담의 결정 방식이 장기 사용과 만족으로 이어지는지를 전향으로 본다. 만족도와 착용 지속은 지금 자료로는 부족해 수집이 필요하다.</p>
+<div class="study">
+  <div class="tt">E1. 첫 상담의 결정 소유권이 6개월 실사용과 만족에 미치는 영향 (EMA 결합)</div>
+  <div class="ln"><span class="k">핵심</span> 당사자가 스스로 결정했는지가 6개월 후 착용 지속과 만족을 예측하는가?</div>
+  <div class="meta">전향 코호트, IOI-HA/KAPM, 착용 데이터로깅, EMA. 저널 후보: Ear and Hearing, International Journal of Audiology</div>
+</div>
+<div class="study">
+  <div class="tt">E2. 상담 의사결정 방식과 반품, 착용 시간</div>
+  <div class="ln"><span class="k">핵심</span> 강요된 구매가 반품과 짧은 착용으로 이어지는가?</div>
+  <div class="meta">전향 수집 착용 데이터와 반품 기록. 저널 후보: International Journal of Audiology</div>
+</div>
+
+<h2>F. 방법론과 데이터 자원</h2>
+<p class="lead">이 코퍼스를 다루는 방법 자체가 연구가 된다. 지금 가장 뜨거운 주제이자, 뒤 연구들이 서는 토대다.</p>
+<div class="study">
+  <div class="tt">F1. 임상 상담 코딩의 사람 코더 2인과 거대언어모델 3종 일치도</div>
+  <div class="ln"><span class="k">핵심</span> 자동 코딩이 사람 수준의 일치도에 도달하며, 어떤 범주에서 어긋나는가?</div>
+  <div class="meta">코딩 코퍼스와 음성. 범주별 Cohen/Fleiss Kappa. 저널 후보: Journal of Medical Internet Research, Patient Education and Counseling, Behavior Research Methods</div>
+</div>
+<div class="study">
+  <div class="tt">F2. 고령 난청 당사자가 포함된 삼자 임상 대화의 자동 화자분리 파이프라인</div>
+  <div class="ln"><span class="k">핵심</span> 자동 화자분리가 사람 수준의 역할 귀속에 도달해 코딩을 435건 이상으로 확장할 수 있는가?</div>
+  <div class="meta">보유 음성과 175건 역할 라벨. 저널 후보: Speech Communication, Computer Speech and Language</div>
+</div>
+<div class="study">
+  <div class="tt">F3. 한국형 보청기 상담 코딩체계(RIAS 확장)와 코퍼스</div>
+  <div class="ln"><span class="k">핵심</span> 삼자 상담용 코딩 체계를 한국어로 개발하고 타당화해 공유 자원으로 세울 수 있는가?</div>
+  <div class="meta">적격 175건 전수 코딩. 범주별 Kappa와 구매 연관. 저널 후보: Patient Education and Counseling, International Journal of Audiology</div>
+</div>
+
+</div>
+</body>
+</html>

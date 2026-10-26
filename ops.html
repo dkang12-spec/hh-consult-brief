@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow"><title>연구 운영안</title><style>
+:root{--navy:#17305a;--navy2:#2b4a84;--ink:#222a35;--muted:#5b6673;--line:#dce1ea;--bg:#fff;--panel:#f6f8fb;
+--green:#2e7d32;--amber:#a9690f;--blue:#1f5fae;--purple:#7b4fae;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;
+ font-family:"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,"Segoe UI","Noto Sans KR",sans-serif;}
+.wrap{max-width:980px;margin:0 auto;padding:32px 34px 90px;}
+header.top{border-bottom:2px solid var(--navy);padding-bottom:16px;margin-bottom:24px;}
+header.top h1{color:var(--navy);font-size:24px;font-weight:800;margin:0 0 6px;letter-spacing:-.3px;}
+header.top .sub{color:var(--muted);font-size:14px;}
+h2{color:var(--navy);font-size:18px;font-weight:800;margin:30px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line);}
+h3{font-size:14.5px;font-weight:700;color:var(--navy2);margin:16px 0 6px;}
+p{font-size:14.5px;margin:7px 0;} ul{font-size:14.5px;margin:7px 0;padding-left:20px;} li{margin:4px 0;}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13.8px;}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;}
+th{background:var(--navy);color:#fff;font-weight:700;}
+tr.sum td,.sum{background:var(--panel);font-weight:700;}
+.lead{font-size:14.5px;color:#333b45;margin:4px 0 10px;}
+.note{font-size:13px;color:var(--muted);}
+.study{border:1px solid var(--line);border-left:4px solid var(--navy2);border-radius:0 8px 8px 0;padding:11px 15px;margin:9px 0;}
+.study .tt{font-weight:800;color:var(--navy);font-size:14.5px;} .study .meta{font-size:12.3px;color:var(--muted);margin-top:6px;}
+.chip{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 9px;border-radius:11px;margin-left:6px;vertical-align:middle;}
+.c-now{background:#e6f4ea;color:var(--green);} .c-method{background:#efe8f7;color:var(--purple);}
+.c-video{background:#e3eefb;color:var(--blue);} .c-fut{background:#fbf1df;color:var(--amber);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:12px 0;}
+.lk{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;background:#fff;transition:.1s;}
+.lk:hover{border-color:var(--navy2);background:var(--panel);}
+.lk .t{font-weight:800;color:var(--navy);font-size:14.5px;} .lk .d{font-size:12.8px;color:var(--muted);margin-top:3px;}
+.statusgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:12px 0;}
+.sb{border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:9px;padding:13px 15px;}
+.sb h4{margin:0 0 5px;font-size:13px;color:var(--muted);font-weight:700;}
+.sb p{margin:0;font-size:14px;font-weight:600;color:var(--ink);}
+.road{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.road .ph{display:flex;border-bottom:1px solid var(--line);} .road .ph:last-child{border-bottom:none;}
+.road .ph .w{flex:none;width:130px;background:var(--navy);color:#fff;padding:12px 14px;font-weight:800;font-size:13.5px;}
+.road .ph .x{padding:11px 16px;font-size:13.6px;}
+a.inl{color:var(--blue);font-weight:700;text-decoration:none;}
+</style></head><body><nav style="background:#17305a;padding:11px 20px;line-height:2;"><a href="index.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">허브</a><a href="agenda.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">연구 지도</a><a href="protocol.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">코딩 프로토콜</a><a href="paper1.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">1편 설계서</a><a href="irb.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">IRB 서류</a><a href="ops.html" style="color:#fff;font-weight:800;text-decoration:underline;margin-right:18px;font-size:13px;">운영안</a></nav><div class="wrap"><header class="top"><h1>연구 운영안</h1><div class="sub">사람 코딩 체제, 화자분리 결정, 역할과 일정</div></header><h2>개요</h2>
+<p class="lead">적격 175건까지 1차 자동코딩을 마쳤다. 이 운영안은 사람 코딩을 연구 본체로 세우고, 화자 주도성 처리와 결과변수 보강을 선결로 정리해, 목요일 결정 뒤 2주 파일럿을 거쳐 1편 착수까지 가는 길을 고정한다.</p>
+<p>현재 데이터 상태는 다음과 같다.</p>
+<ul>
+<li>전체 상담 녹음 1,318건, 계속 증가</li>
+<li>신규 첫상담 435건, 전사원문 253건, 온전세션 216건 전수 코딩 완료</li>
+<li>연구적격 175건 (수리/재방문/소아/교육용 제외)</li>
+<li>동반자 있음 91 / 없음 72 / 애매 12. 관계는 성인자녀 62, 배우자 19, 부모 5, 사위며느리 2, 불명 3</li>
+<li>구매/반품은 ANOS 결제로 전수 확보, 순음역치 청력도 보유</li>
+<li>만족도(KAPM/IOI)는 약 35명 외 희소, 착용지속은 녹음이 6월 시작이라 4개월로 미성숙</li>
+<li>전사에 화자분리 없음, 상담실 CCTV는 1.5개월 뒤 폐기</li>
+</ul>
+<p class="note">예비 신호(동반 있음 구매 52% 대 없음 41%, 배우자 동반 63% 대 성인자녀 48%, 동반자 종결 시 구매후 취소 25% 대 당사자 종결 12%)는 1차 자동코딩이고 사람 검증 전이라 아직 단정하지 않는다. 사람 코딩으로 다시 확인한 뒤에 결과로 쓴다.</p>
+
+<h2>1. 사람 코딩 체제</h2>
+<p class="lead">AI 단독 코딩은 학계에서 코딩 결과로 인정되지 않는다. 사람 코딩이 연구 본체이고, AI는 보조(사전 라벨)와 사람 대비 비교연구용으로만 쓴다. 보고와 논문의 코딩 결과는 사람 코딩을 근거로 한다.</p>
+<ul>
+<li>코더 구성: 독립 코더 2인. 서로의 코딩을 보지 않고 각자 코딩한다.</li>
+<li>코드북: RIAS 삼자 확장 코드북을 정본으로 한다. 청능사(A) / 환자(P) / 동반자(C), 동반자 12범주, 자율성축(북돋음 대 누름). 분석단위는 발화, 화자-청자 하이픈 표기(A-P 등).</li>
+<li>훈련: 코드북 숙지 뒤 연습코딩으로 범주 적용을 서로 맞춘다.</li>
+<li>이중코딩: 전체의 20%를 두 코더가 독립으로 코딩한다.</li>
+<li>신뢰도 기준: 범주별 Cohen Kappa 0.80 이상을 통과선으로 한다. 미달 범주는 코드북 정의를 수정하고 재훈련한 뒤 다시 측정한다.</li>
+<li>불일치 처리: 이중코딩 불일치는 합의 회의로 해소하고, 합의 규칙을 코드북에 반영한다.</li>
+<li>결과 블라인드: 코더는 구매/반품/취소 등 결과변수를 모르는 상태에서 코딩한다. 코딩용 자료에서 결과변수를 분리해 전달한다.</li>
+<li>AI 역할: AI 1차 자동코딩은 사전 라벨과 사람 대비 비교연구 자료로만 쓴다.</li>
+</ul>
+<table>
+<tr><th>범주</th><th>1차 자동코딩 kappa</th><th>상태</th></tr>
+<tr><td>관계</td><td>0.86</td><td>양호</td></tr>
+<tr><td>동반여부</td><td>0.80</td><td>통과선</td></tr>
+<tr><td>종결자</td><td>0.74</td><td>보강</td></tr>
+<tr><td>의사소통유형</td><td>0.60</td><td>보강</td></tr>
+<tr><td>활성화</td><td>0.59</td><td>보강</td></tr>
+</table>
+<p class="note">이 수치는 자동코딩 1차-2차 일치도다. 사람 코딩 신뢰도는 파일럿에서 범주별로 다시 측정한다. 의사소통유형과 활성화처럼 0.80 미달 범주는 파일럿 전에 코드북 정의부터 다듬는다.</p>
+
+<h2>2. 화자 주도성 처리 결정 트리</h2>
+<p class="lead">현재 전사에는 화자분리가 없어 누가 말했는지(청능사/환자/동반자) 확정이 안 된다. 종결자와 자율성축 같은 주도성 코딩은 화자 확정이 선결이다.</p>
+<ul>
+<li>선결 확인: 원본 상담 오디오가 지금 재생 가능한가? {확인 필요}
+<ul>
+<li>재생 가능하면 화자분리 재전사와 영상 중 하나를 고른다.
+<ul>
+<li>화자분리 재전사: 오디오에 화자분리를 적용해 A/P/C 라벨을 붙인 전사로 다시 만든다. 영상 없이 보관 오디오만으로 진행할 수 있어 기본안으로 본다.</li>
+<li>영상: 상담실 영상으로 화자를 눈으로 확정한다. 다만 상담실 CCTV는 1.5개월 뒤 폐기되므로, 영상을 쓰려면 폐기 전에 확보해야 하고 IRB 계획에 영상 사용을 포함해야 한다. 서두르지 않으면 이 선택지는 사라진다.</li>
+</ul>
+</li>
+<li>재생 불가하면 기존 분은 화자 확정이 안 되므로, 주도성과 자율성축은 화자 확정이 가능한 신규 녹음분부터 전향으로 코딩한다. 기존 분은 화자 확정이 필요 없는 변수(동반여부, 관계, 결과)로만 쓴다.</li>
+</ul>
+</li>
+</ul>
+<p class="note">가장 급한 선결은 CCTV 폐기 시한이다. 영상 사용 여부를 목요일 미팅에서 먼저 정하고, 쓰기로 하면 즉시 확보와 IRB 포함을 진행한다.</p>
+
+<h2>3. 결과변수 보강</h2>
+<ul>
+<li>구매/반품: ANOS 결제로 전수 확보됐다. 1차 결과변수로 바로 쓴다.</li>
+<li>만족도: IOI-HA를 전향 수집으로 착수한다. 지금 보유가 약 35명뿐이라 후향으로는 부족하다. 신규/재방문 접점에서 표준 시점(피팅 후 {확인 필요}주)에 IOI-HA를 받는 흐름을 만든다.</li>
+<li>착용 데이터: 보청기 착용 로깅을 결과변수로 수집 착수한다. 녹음이 6월 시작이라 착용지속이 4개월로 미성숙이니, 지금부터 로깅을 쌓아 숙성시킨다.</li>
+</ul>
+<p class="note">IOI-HA는 표준화 문항이라 문항을 바꾸지 않고 원문 그대로 받는다.</p>
+
+<h2>4. 역할</h2>
+<table>
+<tr><th>역할</th><th>담당</th><th>범위</th></tr>
+<tr><td>데이터/설계/인프라</td><td>강동훈</td><td>ANOS 데이터 추출, 연구 설계, 코딩과 분석 인프라</td></tr>
+<tr><td>코딩/전사/박사논문</td><td>양홍석</td><td>사람 코딩, 전사와 화자분리 작업, 박사논문 집필</td></tr>
+<tr><td>분석</td><td>통계담당 {확인 필요}</td><td>통계 분석</td></tr>
+<tr><td>지도/설계 확정</td><td>장현숙 교수</td><td>연구 지도, 설계와 코드북 최종 확정</td></tr>
+</table>
+
+<h2>5. 일정</h2>
+<ul>
+<li>1단계 (목요일 미팅, 날짜 {확인 필요}): 결정사항을 교수님 지도로 확정한다. 코딩 체제, 화자 주도성 처리 방식(영상 사용 여부 포함), 결과변수 보강 범위, 역할.</li>
+<li>2단계 (2주 파일럿): 두 코더가 적격분 일부를 사람 코딩하고, 이중코딩으로 범주별 Cohen Kappa를 측정한다. 0.80 미달 범주는 코드북 정의를 다듬어 확정한다.</li>
+<li>3단계 (1편 착수): 코드북 확정 뒤 1편을 쓴다. 1편 주제 {확인 필요}, 후보는 동반자 동반 여부와 구매/취소의 관계.</li>
+</ul>
+
+<h2>6. 선결 리스크 체크리스트</h2>
+<table>
+<tr><th>선결 항목</th><th>담당</th><th>상태</th></tr>
+<tr><td>원본 상담 오디오 재생 가능 확인</td><td>강동훈</td><td>확인 필요</td></tr>
+<tr><td>CCTV 영상 확보 (쓸 경우 폐기 전 1.5개월 내)</td><td>강동훈</td><td>가장 급함</td></tr>
+<tr><td>IRB 승인 (영상/녹음 연구 활용). 개인정보보호법상 가맹 데이터 활용은 변호사 자문으로 가능 확인, IRB는 별개 트랙</td><td>강동훈, 장현숙 교수</td><td>확인 필요</td></tr>
+<tr><td>0.80 미달 범주 코드북 보강 (의사소통유형, 활성화)</td><td>양홍석, 장현숙 교수</td><td>파일럿 전 처리</td></tr>
+<tr><td>통계담당 확정</td><td>장현숙 교수</td><td>확인 필요</td></tr>
+<tr><td>IOI-HA 전향 수집 시점과 흐름 확정</td><td>강동훈</td><td>확인 필요</td></tr>
+<tr><td>착용 로깅 수집 경로 확보</td><td>강동훈</td><td>확인 필요</td></tr>
+<tr><td>2번째 코더 확보와 훈련 일정</td><td>양홍석</td><td>확인 필요</td></tr>
+<tr><td>결과 블라인드용 데이터 분리</td><td>강동훈</td><td>진행 가능</td></tr>
+</table></div></body></html>

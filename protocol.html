@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>보청기 3자 상담 RIAS 기반 발화 코딩 프로토콜</title>
+<style>
+  :root{--navy:#17305a;--navy2:#223d6b;--ink:#20262f;--muted:#5b6673;--line:#d8dee8;
+    --bg:#fff;--panel:#f5f7fb;--se:#2e7d32;--tf:#1f5fae;--ct:#c0392b;--en:#7b4fae;--pr:#5b6673;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;
+    font-family:"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,"Segoe UI","Noto Sans KR",sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 30px 80px;}
+  header.top{border-bottom:3px solid var(--navy);padding-bottom:16px;margin-bottom:26px;}
+  header.top h1{color:var(--navy);font-size:24px;font-weight:800;margin:0 0 6px;letter-spacing:-.4px;}
+  header.top .sub{color:var(--muted);font-size:14.5px;}
+  h2{background:var(--navy);color:#fff;font-size:17px;font-weight:700;margin:32px 0 14px;padding:9px 15px;border-radius:6px;}
+  h3{color:var(--navy2);font-size:15.5px;font-weight:700;margin:22px 0 8px;}
+  p{margin:7px 0;font-size:14.5px;}
+  ul{margin:6px 0;padding-left:20px;font-size:14.5px;} li{margin:4px 0;}
+  .note{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:14px 18px;font-size:14px;margin:12px 0;}
+  table{border-collapse:collapse;width:100%;margin:10px 0 18px;font-size:13.3px;}
+  th,td{border:1px solid var(--line);padding:7px 9px;vertical-align:top;text-align:left;}
+  td.code{font-weight:800;white-space:nowrap;text-align:center;}
+  td.name{font-weight:700;white-space:nowrap;}
+  td.ex{color:#394150;}
+  tr.band td{background:var(--panel);font-weight:800;font-size:13.5px;letter-spacing:.3px;}
+  .se td.code,.se td.name{color:var(--se);} .tf td.code,.tf td.name{color:var(--tf);}
+  .ct td.code,.ct td.name{color:var(--ct);} .en td.code,.en td.name{color:var(--en);}
+  .pr td.code,.pr td.name{color:var(--pr);}
+  .pill{display:inline-block;font-size:11px;font-weight:800;padding:1px 7px;border-radius:10px;margin-left:5px;vertical-align:middle;}
+  .up{background:#e6f4ea;color:var(--se);} .down{background:#f9e4e1;color:var(--ct);}
+  .axis{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;}
+  .axis .a{flex:1 1 300px;border:1px solid var(--line);border-radius:9px;padding:12px 15px;}
+  .axis .a.u{border-top:4px solid var(--se);} .axis .a.d{border-top:4px solid var(--ct);}
+  .axis .a h4{margin:0 0 6px;font-size:14px;}
+  .files{margin-top:28px;border-top:1px solid var(--line);padding-top:12px;font-size:12.5px;color:var(--muted);}
+</style>
+</head>
+<body>
+<nav style="background:#17305a;padding:11px 20px;line-height:2;"><a href="index.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">허브</a><a href="agenda.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">연구 지도</a><a href="protocol.html" style="color:#fff;font-weight:800;text-decoration:underline;margin-right:18px;font-size:13px;">코딩 프로토콜</a><a href="paper1.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">1편 설계서</a><a href="irb.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">IRB 서류</a><a href="ops.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">운영안</a></nav>
+<div class="wrap">
+
+<header class="top">
+  <h1>보청기 3자 상담 분석을 위한 RIAS 기반 세부 발화 코딩 프로토콜</h1>
+  <div class="sub">Roter Interaction Analysis System(RIAS)을 청능사-환자-동반자 3자 상담 맥락에 적용(Adapted)한 코딩 체계. 발화 단위(Utterance)를 기본 분석 단위로 하며, 동반자의 의사소통 유형과 주도성을 정량화하도록 설계.</div>
+</header>
+
+<h2>1. 코딩 기본 원칙 및 분석 단위</h2>
+<h3>1.1 분석 단위 (Unit of Analysis)</h3>
+<p>의미를 담은 최소 언어 단위인 '단일 사고 단위(Thought Unit / Utterance)'를 코딩 단위로 한다. 한 문장이라도 독립적인 두 기능을 포함하면(예: 정보 제공 더하기 권유) 2개의 발화로 분리해 코딩한다.</p>
+<h3>1.2 화자와 청자 표기</h3>
+<ul>
+  <li>화자(Speaker): 청능사(A, Audiologist), 환자(P, Patient), 동반자(C, Companion).</li>
+  <li>청자(Target): 화자 뒤에 대상을 하이픈으로 표기한다. C-A는 동반자가 청능사에게 한 발화, C-P는 동반자가 환자에게 한 발화, A-P는 청능사가 환자에게, A-C는 청능사가 동반자에게.</li>
+  <li>대상 표기는 '청능사가 누구를 보고 말하는가'(삼자 시선)를 정량화하기 위한 핵심 장치다.</li>
+</ul>
+<h3>1.3 평가자 간 신뢰도 (Inter-rater Reliability)</h3>
+<p>전체 샘플의 20%를 무작위 추출해 코더 2인이 독립 코딩하고, 범주별 Cohen's Kappa 0.80 이상을 유지한다. 코더는 상담 결과(구매/만족/지속)에 블라인드로 코딩해 편향을 차단한다.</p>
+<div class="note">파일럿(216건 1차 코딩 더하기 독립 2차) 결과, 동반 여부 Kappa 0.80, 관계유형 0.86, 결정 종결자 0.74는 기준을 충족했고, 의사소통 유형 0.60, 당사자 활성화 0.59는 아래 세부 코드로 조작적 정의를 조여 0.80으로 끌어올린다.</div>
+
+<h2>2. 발화 범주 및 조작적 정의</h2>
+
+<h3>2.1 동반자(Companion) 발화 범주</h3>
+<table>
+  <tr><th style="width:62px">세부 코드</th><th style="width:210px">코드명 (국문 / 영문)</th><th>조작적 정의</th><th style="width:270px">실제 발화 예시</th></tr>
+  <tr class="band"><td colspan="4">정서적 / 관계적 (Socio-emotional)</td></tr>
+  <tr class="se"><td class="code">SE-1</td><td class="name">정서적 지지 및 공감<br>Empathy / Support</td><td>환자의 청각적 고충이나 불편을 인지하고 정서적 안정과 지지를 제공하는 발언.</td><td class="ex">"엄마 너무 생각하지 마." / "그동안 안 들려서 답답했지?"</td></tr>
+  <tr class="se"><td class="code">SE-2</td><td class="name">자율성 지지<span class="pill up">북돋음</span><br>Autonomy Support</td><td>결정 권한이 환자 본인에게 있음을 인정하고 존중하는 발언.</td><td class="ex">"본인이 한다고 했으니까 요걸로 해주세요." / "아빠가 결정해, 일주일씩 써보고."</td></tr>
+  <tr class="se"><td class="code">SE-3</td><td class="name">승인 / 안심<br>Approval / Reassurance</td><td>환자의 긍정적 시도(착용 테스트 등)를 칭찬하거나 결과를 낙관하는 발언.</td><td class="ex">"처음부터 잘하는 사람 어디 있어." / "착용하니까 훨씬 잘 들리네요."</td></tr>
+  <tr class="se"><td class="code">SE-4</td><td class="name">불일치 / 갈등 표출<span class="pill down">누름</span><br>Disagreement / Conflict</td><td>환자의 선택이나 발언에 반박하거나 불만, 비난을 표출하는 발언.</td><td class="ex">"엄마가 기가 나빠서 안 들리는 거지." / "당신이 뭘 알아."</td></tr>
+  <tr class="band"><td colspan="4">과업 지향적 (Task-focused)</td></tr>
+  <tr class="tf"><td class="code">TF-1</td><td class="name">정보 제공, 대리 전달<br>Surrogate Information Giving</td><td>환자의 청력 상태, 생활 속 어려움, 기기 불편 등을 환자를 대신해 설명하는 발언.</td><td class="ex">"저희 엄마가 외부에 많이 다니세요." / "집에서 TV 볼륨을 많이 올려요."</td></tr>
+  <tr class="tf"><td class="code">TF-2</td><td class="name">정보 탐색 질문<br>Information Seeking</td><td>보청기 기능, 비용, 지원금, 절차에 관해 청능사에게 묻는 발언.</td><td class="ex">"충전식인가요? 보험 되나요?" / "정부 지원 없나요?"</td></tr>
+  <tr class="tf"><td class="code">TF-3</td><td class="name">확인 / 재질문<br>Clarification</td><td>청능사의 설명을 환자 대신 되묻거나 확인하는 발언.</td><td class="ex">"그러니까 한쪽만 먼저 하는 거죠?"</td></tr>
+  <tr class="band"><td colspan="4">참여 유도 (Engagement)</td></tr>
+  <tr class="en"><td class="code">EN-1</td><td class="name">환자 발화 유도<span class="pill up">북돋음</span><br>Eliciting Patient Voice</td><td>환자를 대화에 끌어들여 직접 말하거나 선택하게 하는 발언. 청능사에게 환자에게 직접 물어 달라 요청하는 것도 포함.</td><td class="ex">"엄마는 어떤 게 편할 것 같아?" / "뭐가 더 편해?"</td></tr>
+  <tr class="en"><td class="code">EN-2</td><td class="name">옹호 / 선호 대변<span class="pill up">북돋음</span><br>Advocacy</td><td>환자의 선호나 능력을 청능사에게 대변하고 편드는 발언.</td><td class="ex">"본인은 작은 걸 원하세요." / "엄마가 혼자서도 잘 하실 거예요."</td></tr>
+  <tr class="band"><td colspan="4">통제 / 주도 (Control / Directive)</td></tr>
+  <tr class="ct"><td class="code">CT-1</td><td class="name">대리 결정<span class="pill down">누름</span><br>Surrogate Decision-making</td><td>환자 대신 구매나 선택을 확정하는 발언.</td><td class="ex">"그냥 이걸로 해주세요." / "현금으로 할게요."</td></tr>
+  <tr class="ct"><td class="code">CT-2</td><td class="name">지시 / 통제<span class="pill down">누름</span><br>Directive / Control</td><td>환자의 행동을 지시하거나 환자 의견을 무시하고 통제하는 발언.</td><td class="ex">"가만히 있어 봐, 이거 껴봐." / "아버지는 몰라요, 제가 정할게요."</td></tr>
+  <tr class="ct"><td class="code">CT-3</td><td class="name">설득 / 압박<span class="pill down">누름</span><br>Persuasion / Pressure</td><td>거부하는 환자를 강하게 설득하거나 압박하는 발언.</td><td class="ex">"치매 걸린다니까 진짜, 엄마." / "이번엔 꼭 해야 돼."</td></tr>
+  <tr class="band"><td colspan="4">절차 (Process)</td></tr>
+  <tr class="pr"><td class="code">PR-1</td><td class="name">절차 / 행정<br>Procedural</td><td>일정, 서류, 결제 방식, 방문 조율 등 행정적 발언.</td><td class="ex">"200에 해주시면 하고 갈게요." / "목요일에 다시 올게요."</td></tr>
+</table>
+
+<h3>2.2 청능사(Audiologist) 발화 범주</h3>
+<p>대상 표기(A-P 대 A-C)를 반드시 병기해 '청능사가 환자를 세우는가, 동반자를 보고 말하는가'를 측정한다. 가족중심 상담 실천의 핵심 지표다.</p>
+<table>
+  <tr><th style="width:62px">세부 코드</th><th style="width:210px">코드명 (국문 / 영문)</th><th>조작적 정의</th><th style="width:270px">실제 발화 예시</th></tr>
+  <tr class="tf"><td class="code">AU-IG</td><td class="name">정보 제공<br>Information Giving</td><td>청력 결과, 제품, 관리법 등 정보를 제공하는 발언.</td><td class="ex">"오른쪽이 중도 난청이세요."</td></tr>
+  <tr class="tf"><td class="code">AU-QO</td><td class="name">개방형 질문<br>Open Question</td><td>자유 응답을 끌어내는 질문.</td><td class="ex">"언제 제일 불편하세요?"</td></tr>
+  <tr class="tf"><td class="code">AU-QC</td><td class="name">폐쇄형 질문<br>Closed Question</td><td>예/아니오나 단답을 요구하는 질문.</td><td class="ex">"이 소리 들리세요?"</td></tr>
+  <tr class="se"><td class="code">AU-CO</td><td class="name">상담 / 권고<br>Counseling</td><td>행동 변화나 선택을 권고, 조언하는 발언.</td><td class="ex">"두 쪽 다 하시는 게 좋아요."</td></tr>
+  <tr class="se"><td class="code">AU-PE</td><td class="name">파트너십 / 공감<br>Partnership / Empathy</td><td>환자 입장에 공감하고 함께 풀어가자는 발언.</td><td class="ex">"천천히 같이 맞춰봐요."</td></tr>
+  <tr class="en"><td class="code">AU-FE</td><td class="name">환자 참여 촉진<span class="pill up">북돋음</span><br>Facilitates Patient Involvement</td><td>환자에게 직접 질문하거나 선택권을 주어 참여를 끌어내는 발언(A-P로 표기).</td><td class="ex">"어머니, 어떤 색이 좋으세요?"</td></tr>
+</table>
+
+<h3>2.3 환자(Patient) 발화 범주</h3>
+<table>
+  <tr><th style="width:62px">세부 코드</th><th style="width:210px">코드명 (국문 / 영문)</th><th>조작적 정의</th><th style="width:270px">실제 발화 예시</th></tr>
+  <tr class="tf"><td class="code">PT-IG</td><td class="name">정보 제공<br>Information Giving</td><td>자신의 증상, 생활, 선호를 직접 말하는 발언.</td><td class="ex">"오른쪽이 더 안 들려요."</td></tr>
+  <tr class="tf"><td class="code">PT-QU</td><td class="name">질문<br>Question</td><td>청능사에게 직접 묻는 발언.</td><td class="ex">"이거 오래 가나요?"</td></tr>
+  <tr class="en"><td class="code">PT-DE</td><td class="name">선호 / 결정 표현<span class="pill up">능동</span><br>Preference / Decision</td><td>자신의 선택이나 결정을 스스로 밝히는 발언.</td><td class="ex">"난 작은 걸로 할래."</td></tr>
+  <tr class="en"><td class="code">PT-AS</td><td class="name">적극 참여 / 주장<span class="pill up">능동</span><br>Assertiveness</td><td>대화를 주도하거나 자기 의견을 분명히 세우는 발언.</td><td class="ex">"그건 내가 알아서 할게."</td></tr>
+  <tr class="pr"><td class="code">PT-AC</td><td class="name">수동 / 순응<br>Acquiescence</td><td>짧은 동의나 끌려가는 반응으로 주도성이 낮은 발언.</td><td class="ex">"어, 응, 그래." / "알아서 해."</td></tr>
+  <tr class="ct"><td class="code">PT-RE</td><td class="name">거부 / 저항<br>Resistance</td><td>제안이나 결정에 저항하거나 거부하는 발언.</td><td class="ex">"난 안 해, 됐어."</td></tr>
+</table>
+
+<h2>3. 파생 지표 (정량화)</h2>
+<p>세부 코드 빈도를 합산해 세션 단위 지표를 만든다. 발화 점유율은 화자 분리(영상 또는 화자분리 재전사)가 있어야 산출된다.</p>
+<h3>3.1 발화 점유율 (Talk Share)</h3>
+<p>각 화자(청능사/환자/동반자)의 발화 수를 전체 발화 수로 나눈 비율. 환자 점유율이 낮을수록 당사자 소외를 뜻한다.</p>
+<h3>3.2 동반자 자율성 지수 (Autonomy Index)</h3>
+<div class="axis">
+  <div class="a u"><h4>북돋음 (Autonomy-enhancing)</h4>SE-2 자율성 지지, EN-1 환자 발화 유도, EN-2 옹호</div>
+  <div class="a d"><h4>누름 (Autonomy-detracting)</h4>SE-4 갈등, CT-1 대리 결정, CT-2 지시 통제, CT-3 압박</div>
+</div>
+<p>자율성 지수는 북돋음 발화 빈도를 누름 발화 빈도로 나눈 값. 1보다 크면 북돋음 우세, 작으면 누름 우세. 이 축이 연구의 핵심 독립변수다.</p>
+<h3>3.3 의사결정 주도와 종결자</h3>
+<p>구매나 선택을 최종적으로 매듭지은 발화의 화자를 코딩한다(당사자 / 동반자 / 공동 / 청능사). 환자 능동성 지수는 PT-DE, PT-AS, PT-QU 빈도를 환자 전체 발화로 나눈 값.</p>
+<h3>3.4 청능사 대상 지향 (삼자 시선)</h3>
+<p>청능사 발화 중 환자 대상(A-P) 비율과 동반자 대상(A-C) 비율. 동반자 쪽으로 기울수록 당사자가 상담에서 밀려났음을 뜻한다. 가족중심 상담 실천도 지표.</p>
+
+<h2>4. 결과변수 연계</h2>
+<ul>
+  <li>1차 결과: 구매 여부(이진). ANOS 계약으로 확정. 지금 후향으로 산출 가능.</li>
+  <li>2차 결과: 만족도(IOI-HA 등 검증 도구), 착용 지속(3개월, 6개월 사용 여부와 반품). 전향 수집으로 확보.</li>
+  <li>분석: 자율성 지수와 세부 코드 프로파일을 주 독립변수로, 연령과 관계유형, 센터를 보정한 로지스틱 및 다수준 모형.</li>
+</ul>
+
+<h2>5. 코딩 절차와 품질 관리</h2>
+<ul>
+  <li>화자 분리: 파일럿은 코더가 오디오를 들으며 수작업 라벨링, 본표본은 화자분리 재전사 또는 영상 매칭으로 확보.</li>
+  <li>코더 훈련: 본 프로토콜로 공동 훈련 후 연습 코딩, 불일치 사례 합의로 코드북을 조인다.</li>
+  <li>이중 코딩: 전체 20% 독립 코딩, 범주별 Cohen's Kappa 0.80 이상 확인, 미달 범주는 정의 수정 후 재훈련.</li>
+  <li>블라인드: 코더는 구매/만족/지속 결과를 모른 채 코딩한다.</li>
+  <li>보고 기준: 관찰연구 STROBE, 질적 보강 시 COREQ. 투고 전 사전등록.</li>
+</ul>
+
+<div class="files">예시 발화는 상담 전사 216건에서 뽑은 비식별 발췌다. 코드 빈도와 케이스별 코드는 연구 운영 산출물로 관리한다.</div>
+
+</div>
+</body>
+</html>

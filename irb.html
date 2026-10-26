@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow"><title>IRB 서류 골격</title><style>
+:root{--navy:#17305a;--navy2:#2b4a84;--ink:#222a35;--muted:#5b6673;--line:#dce1ea;--bg:#fff;--panel:#f6f8fb;
+--green:#2e7d32;--amber:#a9690f;--blue:#1f5fae;--purple:#7b4fae;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;
+ font-family:"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,"Segoe UI","Noto Sans KR",sans-serif;}
+.wrap{max-width:980px;margin:0 auto;padding:32px 34px 90px;}
+header.top{border-bottom:2px solid var(--navy);padding-bottom:16px;margin-bottom:24px;}
+header.top h1{color:var(--navy);font-size:24px;font-weight:800;margin:0 0 6px;letter-spacing:-.3px;}
+header.top .sub{color:var(--muted);font-size:14px;}
+h2{color:var(--navy);font-size:18px;font-weight:800;margin:30px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line);}
+h3{font-size:14.5px;font-weight:700;color:var(--navy2);margin:16px 0 6px;}
+p{font-size:14.5px;margin:7px 0;} ul{font-size:14.5px;margin:7px 0;padding-left:20px;} li{margin:4px 0;}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13.8px;}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;}
+th{background:var(--navy);color:#fff;font-weight:700;}
+tr.sum td,.sum{background:var(--panel);font-weight:700;}
+.lead{font-size:14.5px;color:#333b45;margin:4px 0 10px;}
+.note{font-size:13px;color:var(--muted);}
+.study{border:1px solid var(--line);border-left:4px solid var(--navy2);border-radius:0 8px 8px 0;padding:11px 15px;margin:9px 0;}
+.study .tt{font-weight:800;color:var(--navy);font-size:14.5px;} .study .meta{font-size:12.3px;color:var(--muted);margin-top:6px;}
+.chip{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 9px;border-radius:11px;margin-left:6px;vertical-align:middle;}
+.c-now{background:#e6f4ea;color:var(--green);} .c-method{background:#efe8f7;color:var(--purple);}
+.c-video{background:#e3eefb;color:var(--blue);} .c-fut{background:#fbf1df;color:var(--amber);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:12px 0;}
+.lk{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;background:#fff;transition:.1s;}
+.lk:hover{border-color:var(--navy2);background:var(--panel);}
+.lk .t{font-weight:800;color:var(--navy);font-size:14.5px;} .lk .d{font-size:12.8px;color:var(--muted);margin-top:3px;}
+.statusgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:12px 0;}
+.sb{border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:9px;padding:13px 15px;}
+.sb h4{margin:0 0 5px;font-size:13px;color:var(--muted);font-weight:700;}
+.sb p{margin:0;font-size:14px;font-weight:600;color:var(--ink);}
+.road{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.road .ph{display:flex;border-bottom:1px solid var(--line);} .road .ph:last-child{border-bottom:none;}
+.road .ph .w{flex:none;width:130px;background:var(--navy);color:#fff;padding:12px 14px;font-weight:800;font-size:13.5px;}
+.road .ph .x{padding:11px 16px;font-size:13.6px;}
+a.inl{color:var(--blue);font-weight:700;text-decoration:none;}
+</style></head><body><nav style="background:#17305a;padding:11px 20px;line-height:2;"><a href="index.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">허브</a><a href="agenda.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">연구 지도</a><a href="protocol.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">코딩 프로토콜</a><a href="paper1.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">1편 설계서</a><a href="irb.html" style="color:#fff;font-weight:800;text-decoration:underline;margin-right:18px;font-size:13px;">IRB 서류</a><a href="ops.html" style="color:#c7d4ec;font-weight:600;text-decoration:none;margin-right:18px;font-size:13px;">운영안</a></nav><div class="wrap"><header class="top"><h1>IRB 서류 골격</h1><div class="sub">후향과 전향 2트랙. 심의신청서 / 설명문 / 동의서 골격</div></header><h2>IRB 서류 골격 - 후향과 전향 2트랙</h2>
+
+<p class="lead">이 연구는 두 개의 법/심의 트랙을 동시에 충족해야 진행된다. 하나는 생명윤리 및 안전에 관한 법률에 따른 IRB(기관생명윤리위원회) 심의이고, 다른 하나는 개인정보보호법에 따른 개인정보 수집/이용/보유의 적법성이다. 둘은 별개 트랙이라 한쪽을 통과해도 다른 쪽이 자동으로 해결되지 않는다. 변호사 자문(가맹 데이터 활용 가능)은 개인정보보호법 관점의 검토이고, IRB 동의면제/재동의 판단은 생명윤리법 트랙에서 별도로 받아야 한다.</p>
+
+<table>
+<tr><th>구분</th><th>생명윤리법 IRB 트랙</th><th>개인정보보호법 트랙</th></tr>
+<tr><td>무엇을 본다</td><td>인간대상연구의 윤리성, 동의, 위험/이익</td><td>개인정보/민감정보(건강정보)의 수집/이용/보유/위탁의 적법 근거</td></tr>
+<tr><td>판단 주체</td><td>한림대 IRB</td><td>개인정보 처리자(오디스랩) 및 법률 자문</td></tr>
+<tr><td>핵심 산출</td><td>심의신청서, 연구계획서, 설명문/동의서, 동의면제 판단</td><td>수집/이용 동의 또는 적법 근거, 위탁/제3자 제공 검토, 보유기간/파기</td></tr>
+<tr><td>후향 녹음 처리</td><td>동의면제 신청 또는 재동의 (IRB 결정)</td><td>이미 수집된 녹음의 연구 이용 근거 별도 확인</td></tr>
+</table>
+
+<p class="note">실제 기관 서식 번호(심의신청서 서식, 설명문/동의서 서식, 동의면제 신청서 서식 등)는 {확인 필요}. 한림대 IRB 최신 양식이 정본이고, 이 골격은 그 양식의 항목을 채우는 초안이다.</p>
+
+<h2>(1) 심의신청서 핵심 섹션 골격</h2>
+
+<h3>연구명</h3>
+<ul>
+<li>국문(초안): 삼자 상담 상호작용이 성인 난청인의 보청기 구매 결정과 사후 유지에 미치는 영향 - 상담 녹음 기반 RIAS 확장 코딩 연구</li>
+<li>최종 연구명 {확인 필요} (IRB 제출본 기준)</li>
+<li>연구책임자: 장현숙 (한림대 청각학)</li>
+<li>공동연구자: 양홍석 (박사과정, 박사논문) / 강동훈 (청능사, 하나히어링 센터망 운영사 오디스랩)</li>
+<li>연구기간: {확인 필요} (승인일부터 {확인 필요}개월)</li>
+</ul>
+
+<h3>연구목적과 배경</h3>
+<ul>
+<li>배경: 보청기 첫 상담에 당사자 외 동반자(성인자녀, 배우자, 부모 등)가 함께 오는 경우가 많다. 동반자의 발화가 당사자의 결정과 사후 유지에 미치는 영향은 국내 보청기 상담 맥락에서 체계적으로 분석된 바가 적다.</li>
+<li>목적: 청능사-당사자-동반자 삼자 상담의 의사소통 양상을 발화 단위로 코딩해, 동반자 동반 여부/관계/의사소통 유형이 구매 결정, 결정 종결 주체, 구매 후 취소와 어떻게 연관되는지 규명한다.</li>
+<li>분석틀: RIAS(Roter Interaction Analysis System)를 청능사(A)/환자(P)/동반자(C) 삼자로 확장한 코딩체계. 분석단위는 발화, 화자-청자 하이픈 표기(A-P 등). 동반자 자율성축(북돋음 대 누름)을 핵심 지표로 본다.</li>
+<li>상담에서 청능사/센터가 하는 일은 청능평가/청력측정과 상담/피팅/재활/관리다. 질환의 진단/처방/치료는 이비인후과(의사/병원)의 영역이며, 이 연구는 그 의료행위를 평가하거나 수행하지 않는다.</li>
+</ul>
+
+<h3>연구대상</h3>
+<p>후향과 전향 두 트랙으로 모집한다.</p>
+<table>
+<tr><th>항목</th><th>후향 트랙</th><th>전향 트랙</th></tr>
+<tr><td>대상</td><td>2026-06-16 이후 상담 녹음을 보유한 상담 고객 (신규 첫상담 중심)</td><td>승인 이후 서면동의를 받아 새로 수집하는 상담 고객</td></tr>
+<tr><td>표집</td><td>ANOS에 기록된 해당 기간 상담 중 연구적격 건 (수리/재방문/소아/교육용 제외)</td><td>동의한 신규 첫상담</td></tr>
+<tr><td>현재 규모(예비)</td><td>신규 첫상담 녹음 435, 전사원문 253, 온전세션 216 전수 코딩, 연구적격 175 (1차 자동코딩, 사람검증 전)</td><td>{확인 필요} (목표 표본수)</td></tr>
+<tr><td>동의</td><td>동의면제 신청 또는 재동의 (IRB 결정, 아래 동의 절차 참고)</td><td>서면동의 (본인 및 동반자)</td></tr>
+</table>
+<p class="note">전체 상담 녹음 1,318건은 계속 증가한다. 후향 적격 모수와 전향 목표 표본수는 IRB 제출 시점 수치로 갱신한다. 표본수 산출 근거 {확인 필요}.</p>
+
+<h3>수집자료</h3>
+<ul>
+<li>상담 녹음 및 전사본 (녹음 원음, 텍스트 전사). 화자분리는 현재 미적용이며 영상 또는 재전사로 보완 예정 {확인 필요}.</li>
+<li>ANOS 구매/반품 기록 (결제 기준 전수): 구매 여부, 반품/취소 여부와 시점.</li>
+<li>청력도: 순음청력검사 역치 (보유).</li>
+<li>연령.</li>
+<li>만족도 지표: KAPM/IOI 약 35명분 (보유분 한정, 그 외 거의 없음).</li>
+<li>착용지속: 녹음이 2026-06 시작이라 관찰기간 약 4개월로 미성숙 (보조 지표로만).</li>
+</ul>
+<p class="note">녹음에는 당사자 외 동반자 및 청능사의 음성이 함께 담긴다. 제3자(동반자) 음성 처리에 대한 설명과 동의가 설명문/동의서에 포함되어야 한다.</p>
+
+<h3>비식별과 보관</h3>
+<ul>
+<li>식별정보(성명, 전화번호 등)를 제거하고 연구용 일련번호(ID)를 부여한다. ANOS에서 name 필드가 전화번호로 쓰이는 구조를 반영해 식별자 처리에 유의한다.</li>
+<li>식별키(원본-ID 대응표)는 연구 데이터와 물리적/논리적으로 분리 보관하고, 접근 권한을 연구책임자 및 지정 연구자로 제한한다.</li>
+<li>녹음/전사 원자료는 접근통제된 저장소에 보관하고, 분석은 비식별본으로 수행한다. 대학 저장소 이관 여부와 방식 {확인 필요}.</li>
+<li>보유기간: {확인 필요} (연구 종료 후 보존기간 및 파기 방법 포함).</li>
+<li>개인정보보호법 트랙: 민감정보(건강정보)에 해당하므로 처리 근거, 암호화/접근기록, 위탁/제공 시 계약을 별도로 확인한다. IRB 비식별 서술과 별개로 적법 근거가 성립해야 한다.</li>
+</ul>
+
+<h3>예상 위험과 이익</h3>
+<ul>
+<li>위험: 녹음/전사 및 건강정보 유출 가능성, 녹음에 포함된 동반자 등 제3자 정보 노출 가능성. 상담 중 사생활/가족 관계 내용이 담길 수 있음.</li>
+<li>위험 최소화: 비식별, 식별키 분리, 접근 제한, 보고 시 개인 식별 불가 수준 집계만 제시, 인용문 사용 시 식별정보 제거.</li>
+<li>이익: 연구대상자에게 돌아가는 직접 이익은 없거나 제한적이다. 결과는 보청기 상담 품질과 동반자 참여 방식 개선의 근거로 쓰일 수 있다.</li>
+</ul>
+
+<h3>동의 절차</h3>
+<ul>
+<li>전향: 서면동의. 당사자 동의와 함께, 녹음에 음성이 담기는 동반자의 동의(또는 동반자 음성 처리에 대한 고지와 동의)를 받는다.</li>
+<li>후향: 이미 수집된 녹음이므로 (가) 동의면제 신청 또는 (나) 재동의 중 IRB 판단을 따른다.
+<ul>
+<li>동의면제 사유(초안): 이미 수집된 자료이고 재접촉이 현실적으로 곤란하며, 비식별 처리로 연구대상자 위험이 최소이고, 동의면제가 연구대상자의 권리를 침해하지 않는다는 점. 최종 인정 여부는 IRB 결정 {확인 필요}.</li>
+<li>재동의가 필요하다고 판단되면 연락 가능한 범위에서 재동의를 구하는 절차와 문안 {확인 필요}.</li>
+</ul>
+</li>
+<li>개인정보보호법 트랙은 IRB 동의/면제와 별개로, 후향 녹음의 연구 이용에 대한 적법 근거를 별도 확인한다.</li>
+</ul>
+
+<h3>기관범위</h3>
+<ul>
+<li>직영 센터를 우선 대상으로 한다 (직영 10센터).</li>
+<li>가맹 센터 포함 시: 변호사 자문은 개인정보보호법상 가맹 데이터 활용이 가능하다는 의견이나, 이는 개인정보 트랙의 판단이다. 생명윤리법 트랙에서는 가맹 센터의 연구 참여에 대한 별도 동의/협조와 기관 범위 설정이 필요하다.</li>
+<li>가맹 포함 시 센터 운영 주체(가맹점)와의 개인정보 위탁/제공 관계 정리와 별도 동의 설계 {확인 필요}.</li>
+</ul>
+
+<h3>그 밖의 신청서 항목</h3>
+<ul>
+<li>연구방법 상세: 코딩체계 정의, 이중코딩 신뢰도(20% 이중코딩 Cohen Kappa 기준, 예비 일치도 동반여부 0.80/관계 0.86/종결자 0.74/의사소통유형 0.60/활성화 0.59), 분석 통계 {확인 필요}.</li>
+<li>연구비/이해상충: 하나히어링 센터망 운영사 오디스랩 대표(강동훈)가 공동연구자로서 데이터 보유 기관과 이해관계가 있음을 명시하고 관리 방안 기술 {확인 필요}.</li>
+<li>자료 공유/2차 이용 계획 {확인 필요}.</li>
+</ul>
+
+<h2>(2) 연구대상자 설명문 골격 (전향)</h2>
+
+<p>아래 항목 순서로 작성한다. 설명문은 평서체로 쓰고, 진단/처방/치료 같은 의료행위 표현은 이비인후과(의사/병원)를 주체로 할 때만 사용한다. 우리가 하는 일은 청능평가/청력측정과 상담/피팅/재활/관리로 적는다.</p>
+
+<ul>
+<li>연구제목: {확인 필요} (IRB 제출 연구명)</li>
+<li>연구책임자와 연락처: 장현숙 (한림대 청각학), 연락처 {확인 필요}. 공동연구자 양홍석, 강동훈.</li>
+<li>연구의 목적: 보청기 첫 상담에서 함께 오신 분(동반자)과 당사자, 청능사 사이의 대화 양상이 보청기 선택과 사용에 어떻게 연관되는지 알아보기 위한 연구임을 쉬운 말로 설명.</li>
+<li>참여 대상과 인원: 대상 조건, 목표 인원 {확인 필요}.</li>
+<li>연구 절차: 상담 과정을 녹음(영상 포함 여부 {확인 필요})하고, 청력측정 결과(순음청력도)와 연령, 이후 구매/반품 기록(ANOS)을 연구에 이용한다는 점. 추가 방문이나 별도 검사 유무 {확인 필요}.</li>
+<li>동반자 음성 안내: 녹음에 함께 오신 분의 음성이 담긴다는 점과, 그분께도 동의를 구한다는 점.</li>
+<li>예상되는 위험과 불편: 녹음/건강정보가 다뤄지는 데 따른 불편, 유출 가능성과 이를 줄이기 위한 조치(비식별, 분리 보관, 접근 제한).</li>
+<li>예상되는 이득: 참여자 개인에게 직접적 이득은 없거나 제한적이며, 상담 품질 개선에 기여할 수 있다는 점.</li>
+<li>보상: 유무와 내용 {확인 필요}.</li>
+<li>개인정보 보호: 식별정보 제거와 일련번호 부여, 식별키 분리 보관, 접근 권한 제한, 보고 시 개인을 알아볼 수 없게 처리, 보관기간과 파기 {확인 필요}.</li>
+<li>자발적 참여와 철회: 참여는 자발적이며, 동의 후에도 불이익 없이 언제든 철회할 수 있고 철회 시 자료 처리 방법을 안내. 참여 여부가 상담/구매/서비스에 영향을 주지 않는다는 점.</li>
+<li>문의처: 연구 관련 문의와 연구대상자 권리 관련 IRB 문의처 {확인 필요}.</li>
+<li>동의 의사 확인: 설명을 이해했고 참여에 동의하는지 확인하는 문장과 서명란 연결.</li>
+</ul>
+
+<h2>(3) 동의서 골격</h2>
+
+<p>녹음 사용 동의를 포함한다. 영상 포함 여부는 {확인 필요}이며, 영상이 포함되면 영상 촬영/사용 동의 항목을 추가한다. 설명문과 동의서를 한 서식으로 통합할지 분리할지는 기관 양식에 맞춘다 {확인 필요}.</p>
+
+<h3>당사자 동의서</h3>
+<ul>
+<li>연구 제목과 책임자 {확인 필요}.</li>
+<li>본인은 연구 설명문을 읽고 설명을 들었으며 내용을 이해했다. (동의 체크)</li>
+<li>본인은 궁금한 점을 질문할 기회를 가졌고 충분한 답을 들었다. (동의 체크)</li>
+<li>본인은 참여가 자발적이며 언제든 불이익 없이 철회할 수 있음을 안다. (동의 체크)</li>
+<li>본인은 상담 과정의 음성 녹음과 그 전사본을 연구에 이용하는 데 동의한다. (동의 체크)</li>
+<li>영상 촬영과 영상의 연구 이용에 동의한다. (동의 체크, 영상 포함 시에만 / {확인 필요})</li>
+<li>본인의 순음청력도, 연령, 구매/반품 기록(ANOS)을 연구에 이용하는 데 동의한다. (동의 체크)</li>
+<li>개인정보(민감정보 포함)의 수집/이용/보유에 관한 별도 안내를 읽고 동의한다. (개인정보보호법 트랙, 별도 동의 항목 또는 별지 {확인 필요})</li>
+<li>동의 일자, 성명, 서명. 법정대리인 필요 여부 {확인 필요}.</li>
+<li>사본 1부 수령 확인.</li>
+</ul>
+
+<h3>동반자 동의서 (녹음에 음성이 담기는 동반자)</h3>
+<ul>
+<li>본인은 상담 과정에서 본인의 음성이 녹음되고 전사되어 연구에 이용되는 데 동의한다. (동의 체크)</li>
+<li>영상 포함 시 영상 촬영/이용 동의 (동의 체크 / {확인 필요}).</li>
+<li>참여가 자발적이며 철회 가능함을 안다. (동의 체크)</li>
+<li>동의 일자, 성명, 당사자와의 관계, 서명.</li>
+</ul>
+
+<p class="note">가맹 센터를 포함하는 경우, 위 동의와 별개로 가맹 센터 참여에 대한 동의/협조와 개인정보 위탁/제공 관계를 반영한 별도 동의 설계가 필요하다 {확인 필요}. 후향 트랙은 이 서면동의가 아니라 동의면제 또는 재동의 경로를 따르며, 그 판단은 IRB가 한다.</p></div></body></html>
